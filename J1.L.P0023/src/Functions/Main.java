@@ -203,7 +203,7 @@ public class Main {
                         cus = Manager.customerLogin(listct);
                         logincus = true;
                     }
-                    ArrayList<Order> lo = new ArrayList<Order>();
+                    ArrayList<Order> lo = new ArrayList<>();
                     do {
                         choice2 = Manager.menuCustomer();
                         switch (choice2) {
@@ -211,7 +211,7 @@ public class Main {
                                 Manager.shopping(listfr, ht, cus, lo);
                                 break;
                             case 2:
-                                int choice3 = 0;
+                                int choice3;
 
                                 do {
                                     Manager.displayListOrder(lo, cus);

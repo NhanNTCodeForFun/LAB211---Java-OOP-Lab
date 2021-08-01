@@ -14,7 +14,7 @@ public class Staff {
     private String account;
     private String password;
     private String Name;
-    private String role;
+    private final String role;
     private String phone;
     private String Address;
 
