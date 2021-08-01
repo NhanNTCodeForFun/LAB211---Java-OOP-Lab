@@ -1,0 +1,7 @@
+1;Dang Van Hung;Summer;SRJ
+2;Nguyen Duy Thai;Summer;OSG
+3;Phan Van Tien;Spring;LAB
+2;Nguyen Duy Thai;Summer;JPD
+5;Nguyen Thanh Nhan;Spring;LAB
+4;Nguyen Van Hung;Summer;OSG
+6;Phan Thanh Hung;Spring;PRJ

@@ -1,0 +1,5 @@
+1;Peach;4.0;50;Viet Nam
+2;Strawbery;1.0;30;Viet Nam
+3;Apple;10.0;50;USA
+4;Banana;2.0;50;Viet Nam
+5;Lemon;2.0;51;Viet Nam
