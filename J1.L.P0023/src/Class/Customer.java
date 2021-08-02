@@ -29,7 +29,7 @@ public class Customer {
         return name;
     }
 
-    public Double getTotalPay() { 
+    public Double getTotalPay() {
         return totalPay;
     }
 
@@ -61,5 +61,5 @@ public class Customer {
     public String toString() {
         return phone + ";" + name + ";" + totalPay;
     }
-    
+
 }

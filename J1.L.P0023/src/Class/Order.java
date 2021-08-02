@@ -10,6 +10,7 @@ package Class;
  * @author NhanNT
  */
 public class Order {
+
     private String cusPhone;
     private String fruitId;
     private String fruitName;
@@ -19,8 +20,8 @@ public class Order {
     public Order() {
     }
 
-    public Order(String cusPhone,String fruitId, String fruitName, int quantity, double price) {
-        this.cusPhone=cusPhone;
+    public Order(String cusPhone, String fruitId, String fruitName, int quantity, double price) {
+        this.cusPhone = cusPhone;
         this.fruitId = fruitId;
         this.fruitName = fruitName;
         this.quantity = quantity;
@@ -67,5 +68,5 @@ public class Order {
     public String toString() {
         return cusPhone + ";" + fruitId + ";" + fruitName + ";" + quantity + ";" + price;
     }
-    
+
 }

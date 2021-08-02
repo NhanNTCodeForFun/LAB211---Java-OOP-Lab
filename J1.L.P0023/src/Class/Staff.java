@@ -18,13 +18,13 @@ public class Staff {
     private String phone;
     private String Address;
 
-    public Staff(String account, String password, String Name, String role,String Phone, String Address) {
+    public Staff(String account, String password, String Name, String role, String Phone, String Address) {
         this.account = account;
         this.password = password;
         this.Name = Name;
-        this.role=role;
-        this.phone=Phone;
-        this.Address=Address;        
+        this.role = role;
+        this.phone = Phone;
+        this.Address = Address;
     }
 
     public void setAccount(String account) {
@@ -57,7 +57,7 @@ public class Staff {
 
     @Override
     public String toString() {
-        return account + ";" + password + ";" + Name + ";" + role+";"+phone+";"+Address ;
+        return account + ";" + password + ";" + Name + ";" + role + ";" + phone + ";" + Address;
     }
 
     public String getPhone() {
@@ -75,6 +75,5 @@ public class Staff {
     public void setAddress(String Address) {
         this.Address = Address;
     }
-    
-    
+
 }

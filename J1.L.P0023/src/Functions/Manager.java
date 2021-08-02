@@ -25,9 +25,11 @@ import java.util.Scanner;
 public class Manager {
 
     Scanner in = new Scanner(System.in);
+
     /**
      * Start Menu
-     * @return 
+     *
+     * @return
      */
     static int startMenu() {
         System.out.println("Are you Customer or Staff?");
@@ -40,9 +42,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 3);
         return choice;
     }
+
     /**
      * Manage menu
-     * @return 
+     *
+     * @return
      */
     static int managerMenu() {
         System.out.println("1. Fruit manager.");
@@ -56,9 +60,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 6);
         return choice;
     }
+
     /**
      * Manage Fruit Menu
-     * @return 
+     *
+     * @return
      */
     static int FruitManagerMenu() {
         System.out.println("1. Create Fruit.");
@@ -75,9 +81,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 8);
         return choice;
     }
+
     /**
      * Manage Staff menu
-     * @return 
+     *
+     * @return
      */
     static int StaffManagerMenu() {
         System.out.println("1. List Staff.");
@@ -90,9 +98,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 5);
         return choice;
     }
+
     /**
      * Manage order menu
-     * @return 
+     *
+     * @return
      */
 
     static int OrderManagerMenu() {
@@ -106,9 +116,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 5);
         return choice;
     }
+
     /**
      * Manage customer menu
-     * @return 
+     *
+     * @return
      */
     static int CustomerManagerMenu() {
         System.out.println("1. All customer.");
@@ -119,9 +131,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 3);
         return choice;
     }
+
     /**
      * Staff menu
-     * @return 
+     *
+     * @return
      */
     static int menuStaff() {
         System.out.println("-----NTN FRUIT SHOP-----");
@@ -135,9 +149,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 4);
         return choice;
     }
+
     /**
      * Customer menu
-     * @return 
+     *
+     * @return
      */
     static int menuCustomer() {
         System.out.println("-----NTN FRUIT SHOP-----");
@@ -150,9 +166,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 3);
         return choice;
     }
+
     /**
      * Order menu
-     * @return 
+     *
+     * @return
      */
     static int menuOrder() {
         System.out.println("1. Delete order.");
@@ -162,9 +180,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 3);
         return choice;
     }
+
     /**
      * Main menu
-     * @return 
+     *
+     * @return
      */
     static int menu() {
         System.out.println("1. Create Fruit");
@@ -175,9 +195,11 @@ public class Manager {
         int choice = Validation.checkInputIntLimit(1, 4);
         return choice;
     }
+
     /**
      * Create new fruit
-     * @param listFruit 
+     *
+     * @param listFruit
      */
     static void createFruit(ArrayList<Fruit> listFruit) {
         System.out.println("Enter EXIT to Exit.");
@@ -218,9 +240,11 @@ public class Manager {
 
         }
     }
+
     /**
      * View order
-     * @param hashTable 
+     *
+     * @param hashTable
      */
     static void viewOrder(Hashtable<Customer, ArrayList<Order>> hashTable) {
         for (Customer cus : hashTable.keySet()) {
@@ -229,9 +253,11 @@ public class Manager {
             displayListOrder(lo, cus);
         }
     }
+
     /**
      * Display view order all
-     * @param hashTableAll 
+     *
+     * @param hashTableAll
      */
     static void viewOrderAll(Hashtable<Customer, ArrayList<Order>> hashTableAll) {
         for (Customer cus : hashTableAll.keySet()) {
@@ -240,9 +266,11 @@ public class Manager {
             displayListOrder(lo);
         }
     }
+
     /**
      * Check order all
-     * @param hashTableAll 
+     *
+     * @param hashTableAll
      */
     static void checkOrderAll(Hashtable<Customer, ArrayList<Order>> hashTableAll) {
         System.out.println("Enter Customer phonenumer to check: ");
@@ -255,9 +283,11 @@ public class Manager {
         }
         System.out.println("Not Fond!");
     }
+
     /**
      * Check Order
-     * @param hashTable 
+     *
+     * @param hashTable
      */
     static void checkOrder(Hashtable<Customer, ArrayList<Order>> hashTable) {
         System.out.println("Enter Customer phonenumer to check: ");
@@ -270,9 +300,11 @@ public class Manager {
         }
         System.out.println("Not Fond!");
     }
+
     /**
      * Payment function
-     * @param hashTable 
+     *
+     * @param hashTable
      */
     static void Payment(Hashtable<Customer, ArrayList<Order>> hashTable) {
         System.out.println("Enter Customer phone number: ");
@@ -286,12 +318,14 @@ public class Manager {
         }
         System.out.println("Not have order!");
     }
+
     /**
      * Shopping function
+     *
      * @param listFruit
      * @param hashTable
      * @param customer
-     * @param listOrder 
+     * @param listOrder
      */
     static void shopping(ArrayList<Fruit> listFruit, Hashtable<Customer, ArrayList<Order>> hashTable, Customer customer, ArrayList<Order> listOrder) {
         if (listFruit.isEmpty()) {
@@ -323,9 +357,11 @@ public class Manager {
         hashTable.put(customer, listOrder);
         System.out.println("Add successfull");
     }
+
     /**
      * Display list fruit
-     * @param listFruit 
+     *
+     * @param listFruit
      */
     static void displayListFruit(ArrayList<Fruit> listFruit) {
         int countItem = 1;
@@ -337,8 +373,10 @@ public class Manager {
             }
         }
     }
+
     /**
      * Get fruit by item
+     *
      * @param listFruit
      * @param item
      * @return fruit
@@ -355,10 +393,12 @@ public class Manager {
         }
         return null;
     }
+
     /**
      * Display list order
+     *
      * @param listOrder
-     * @param customer 
+     * @param customer
      */
     static void displayListOrder(ArrayList<Order> listOrder, Customer customer) {
         double total = 0;
@@ -373,9 +413,11 @@ public class Manager {
         System.out.println("Discount: " + discount + "( " + customer.discount() * 100 + "%" + " )");
         System.out.println("Must pay: " + (total - discount));
     }
+
     /**
      * Display list order
-     * @param listOrder 
+     *
+     * @param listOrder
      */
     static void displayListOrder(ArrayList<Order> listOrder) {
 
@@ -387,11 +429,13 @@ public class Manager {
 
         }
     }
+
     /**
      * Update order
+     *
      * @param listOrder
      * @param id
-     * @param quantity 
+     * @param quantity
      */
     static void updateOrder(ArrayList<Order> listOrder, String id, int quantity) {
         for (Order order : listOrder) {
@@ -401,8 +445,10 @@ public class Manager {
             }
         }
     }
+
     /**
      * Staff login function
+     *
      * @param listStaff
      * @return staff
      */
@@ -420,8 +466,10 @@ public class Manager {
         System.out.println("Login false!");
         return null;
     }
+
     /**
      * Customer login function
+     *
      * @param listCustomer
      * @return customer
      */
@@ -444,13 +492,15 @@ public class Manager {
         listCustomer.add(new Customer(phoneNumber, name, 0.0));
         return listCustomer.get(listCustomer.size() - 1);
     }
+
     /**
      * Delete order
+     *
      * @param listFruit
      * @param listOrder
      * @param count
      * @param hashTable
-     * @param customer 
+     * @param customer
      */
     public static void deleteOrder(ArrayList<Fruit> listFruit, ArrayList<Order> listOrder, int count, Hashtable<Customer, ArrayList<Order>> hashTable, Customer customer) {
         Order or = listOrder.get(count);
@@ -465,16 +515,16 @@ public class Manager {
 
         System.out.println("Deleted!");
     }
-    
+
     /**
      * Customer update order
+     *
      * @param listFruit
      * @param listOrder
      * @param count
      * @param hastTable
-     * @param customer 
+     * @param customer
      */
-
     public static void cusUpdateOrder(ArrayList<Fruit> listFruit, ArrayList<Order> listOrder, int count, Hashtable<Customer, ArrayList<Order>> hastTable, Customer customer) {
         Order or = listOrder.get(count);
         int FruitQuan = 0;
@@ -496,10 +546,12 @@ public class Manager {
         hastTable.put(customer, listOrder);
         System.out.println("Updated!");
     }
+
     /**
      * Get index of order from list all orders
+     *
      * @param listOrder
-     * @return 
+     * @return
      */
     public static int getIndexOrderFromList(ArrayList<Order> listOrder) {
         int count = 1;
@@ -516,10 +568,12 @@ public class Manager {
         return choice - 1;
 
     }
+
     /**
      * Load fruit from file
+     *
      * @param filename
-     * @param listFruit 
+     * @param listFruit
      */
     public static void loadFruit(String filename, ArrayList<Fruit> listFruit) {
         FileReader f = null;
@@ -550,10 +604,12 @@ public class Manager {
             }
         }
     }
+
     /**
      * Write Fruit to file
+     *
      * @param listFruit
-     * @param filename 
+     * @param filename
      */
     public static void writeFruit(ArrayList<Fruit> listFruit, String filename) {
         if (listFruit == null || listFruit.isEmpty()) {
@@ -562,7 +618,7 @@ public class Manager {
         PrintWriter w = null;
         try {
             w = new PrintWriter(filename);
-            
+
             for (Fruit fr : listFruit) {
                 w.println(fr.toString());
             }
@@ -578,10 +634,12 @@ public class Manager {
             }
         }
     }
+
     /**
      * Load Staff from file
+     *
      * @param filename
-     * @param listStaff 
+     * @param listStaff
      */
     public static void loadStaff(String filename, ArrayList<Staff> listStaff) {
         FileReader f = null;
@@ -612,10 +670,12 @@ public class Manager {
             }
         }
     }
+
     /**
      * Write staff to file
+     *
      * @param listStaff
-     * @param filename 
+     * @param filename
      */
     public static void writeStaff(ArrayList<Staff> listStaff, String filename) {
         if (listStaff == null || listStaff.isEmpty()) {
@@ -640,10 +700,12 @@ public class Manager {
             }
         }
     }
+
     /**
      * Load Customer from file
+     *
      * @param filename
-     * @param listCustomer 
+     * @param listCustomer
      */
     public static void loadCustomer(String filename, ArrayList<Customer> listCustomer) {
         FileReader f = null;
@@ -674,10 +736,12 @@ public class Manager {
             }
         }
     }
+
     /**
      * Write customer to file
+     *
      * @param listCustomer
-     * @param filename 
+     * @param filename
      */
     public static void writeCustomer(ArrayList<Customer> listCustomer, String filename) {
         if (listCustomer == null || listCustomer.isEmpty()) {
@@ -702,13 +766,13 @@ public class Manager {
             }
         }
     }
-    
+
     /**
      * Load order from file
+     *
      * @param filename
-     * @param listOrderAll 
+     * @param listOrderAll
      */
-
     public static void loadOrder(String filename, ArrayList<Order> listOrderAll) {
         FileReader f = null;
         BufferedReader bf = null;
@@ -742,8 +806,9 @@ public class Manager {
 
     /**
      * Write order to file
+     *
      * @param listOrderAll
-     * @param filename 
+     * @param filename
      */
     public static void writeOrder(ArrayList<Order> listOrderAll, String filename) {
         if (listOrderAll == null || listOrderAll.isEmpty()) {
@@ -752,7 +817,7 @@ public class Manager {
         PrintWriter w = null;
         try {
             w = new PrintWriter(filename);
-            
+
             for (Order or : listOrderAll) {
                 w.println(or.toString());
             }
@@ -768,11 +833,13 @@ public class Manager {
             }
         }
     }
+
     /**
      * Load data to hashTable
+     *
      * @param hashTableAll
      * @param listOrderAll
-     * @param listCustomer 
+     * @param listCustomer
      */
     public static void loadToHashtable(Hashtable<Customer, ArrayList<Order>> hashTableAll, ArrayList<Order> listOrderAll, ArrayList<Customer> listCustomer) {
         for (Customer customer : listCustomer) {
@@ -787,11 +854,13 @@ public class Manager {
             }
         }
     }
+
     /**
      * Update hashTable
+     *
      * @param hashTableAll
      * @param listOrder
-     * @param Customer 
+     * @param Customer
      */
     public static void updateHashTable(Hashtable<Customer, ArrayList<Order>> hashTableAll, ArrayList<Order> listOrder, Customer Customer) {
 
@@ -802,21 +871,23 @@ public class Manager {
         hashTableAll.remove(Customer);
         hashTableAll.put(Customer, ls);
     }
-    
+
     /**
      * Update order list
+     *
      * @param listOrderAll
-     * @param listOrder 
+     * @param listOrder
      */
     public static void updateListOrderAll(ArrayList<Order> listOrderAll, ArrayList<Order> listOrder) {
         for (Order order : listOrder) {
             listOrderAll.add(order);
         }
     }
-    
+
     /**
      * Display all Customer
-     * @param listCustomer 
+     *
+     * @param listCustomer
      */
     public static void AllCustomer(ArrayList<Customer> listCustomer) {
         int count = 1;
@@ -826,9 +897,11 @@ public class Manager {
             count++;
         }
     }
+
     /**
      * Find Customer by phone number
-     * @param listCustomer 
+     *
+     * @param listCustomer
      */
     public static void findCustomer(ArrayList<Customer> listCustomer) {
         System.out.println("Enter Customer phone: ");
@@ -846,12 +919,12 @@ public class Manager {
         }
         System.out.println("Do not exist Customer.");
     }
-    
+
     /**
      * Get list Staff
-     * @param listStaff 
+     *
+     * @param listStaff
      */
-
     public static void ListStaff(ArrayList<Staff> listStaff) {
         int count = 1;
         System.out.printf("%-6s%-10s%-23s%-10s%-12s%-20s\n", "Count", "Account", "Name", "Role", "Phone", "Address");
@@ -860,9 +933,11 @@ public class Manager {
             count++;
         }
     }
+
     /**
      * Update Staff
-     * @param listStaff 
+     *
+     * @param listStaff
      */
 
     public static void updateStaff(ArrayList<Staff> listStaff) {
@@ -892,12 +967,12 @@ public class Manager {
         writeStaff(listStaff, "Staff.txt");
 
     }
-    
+
     /**
      * Create new Staff
-     * @param listStaff 
+     *
+     * @param listStaff
      */
-
     public static void CreateStaff(ArrayList<Staff> listStaff) {
         System.out.println("Enter Acount: ");
         String account = Validation.checkInputString();
@@ -911,9 +986,11 @@ public class Manager {
         System.out.println("Added!");
         writeStaff(listStaff, "Staff.txt");
     }
+
     /**
      * Remove Staff
-     * @param listStaff 
+     *
+     * @param listStaff
      */
     public static void removeStaff(ArrayList<Staff> listStaff) {
         ListStaff(listStaff);
@@ -923,10 +1000,12 @@ public class Manager {
         System.out.println("Removed!");
         writeStaff(listStaff, "Staff.txt");
     }
+
     /**
      * Change Password for Staff
+     *
      * @param listStaff
-     * @param staff 
+     * @param staff
      */
     public static void ChangePassword(ArrayList<Staff> listStaff, Staff staff) {
 
@@ -953,9 +1032,11 @@ public class Manager {
         System.out.println("Changed!");
         writeStaff(listStaff, "Staff.txt");
     }
+
     /**
      * Add quantity of fruit
-     * @param listFruit 
+     *
+     * @param listFruit
      */
 
     public static void Addquantity(ArrayList<Fruit> listFruit) {
@@ -973,10 +1054,11 @@ public class Manager {
         }
         System.out.println("Added!");
     }
-    
+
     /**
      * Reduce quantity of fruit
-     * @param listFruit 
+     *
+     * @param listFruit
      */
     public static void reduceQuantity(ArrayList<Fruit> listFruit) {
         displayListFruit(listFruit);
@@ -995,9 +1077,11 @@ public class Manager {
         }
         System.out.println("Reduced!");
     }
+
     /**
      * Delete Fruit
-     * @param listFruit 
+     *
+     * @param listFruit
      */
 
     public static void deleteFruit(ArrayList<Fruit> listFruit) {
@@ -1056,9 +1140,11 @@ public class Manager {
             System.out.println("Removed!");
         }
     }
+
     /**
      * Check information of fruit by id
-     * @param listFruit 
+     *
+     * @param listFruit
      */
     public static void checkFruit(ArrayList<Fruit> listFruit) {
         System.out.println("Enter fruit id: ");
@@ -1073,9 +1159,11 @@ public class Manager {
         }
         System.out.println("No exist Fruit");
     }
+
     /**
      * Update price of Fruit
-     * @param listFruit 
+     *
+     * @param listFruit
      */
     public static void updatePrice(ArrayList<Fruit> listFruit) {
         displayListFruit(listFruit);

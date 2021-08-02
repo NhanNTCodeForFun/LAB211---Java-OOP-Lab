@@ -10,6 +10,7 @@ package MainFunction;
  * @author NhanNT
  */
 public class Report {
+
     private String studentName;
     private String courseName;
     private int totalCourse;

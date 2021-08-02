@@ -10,6 +10,7 @@ package MainFunction;
  * @author NhanNT
  */
 public class Student implements Comparable<Student> {
+
     private String id;
     private String studentName;
     private String semester;
@@ -68,7 +69,7 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return id+";"+studentName+";"+semester+";"+courseName;
+        return id + ";" + studentName + ";" + semester + ";" + courseName;
     }
-    
+
 }

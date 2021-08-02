@@ -12,21 +12,22 @@ import java.util.Scanner;
 
 /**
  * Validation class
- * 
+ *
  * @author NhanNT
  */
 public class Validation {
 
     private final static Scanner sc = new Scanner(System.in);
+
     /**
-     * 
+     *
      * @param min
      * @param max
-     * 
+     *
      * This function will check the input number are valid in a range or not
-     * 
+     *
      * @return The valid input (result)
-     * @throws Exception 
+     * @throws Exception
      */
     public static int checkLimit(int min, int max) throws Exception {
         while (true) {
@@ -42,13 +43,12 @@ public class Validation {
             }
         }
     }
-    
+
     /**
      * This function will check the input are empty or not
-     * 
-     * @return 
+     *
+     * @return
      */
-
     public static String checkInput() {
         while (true) {
             String result = sc.nextLine().trim();
@@ -63,7 +63,7 @@ public class Validation {
 
     /**
      * Check input is yes or no
-     * 
+     *
      * @return if yes return true, if no return false
      */
     public static boolean checkYorN() {
@@ -82,7 +82,7 @@ public class Validation {
 
     /**
      * Check input is update or delete
-     * 
+     *
      * @return if update return true, if delete return false
      */
     public static boolean checkUorD() {
@@ -98,9 +98,10 @@ public class Validation {
             System.out.print("Enter again: ");
         }
     }
+
     /**
      * Check input course is valid or not, if not valid -> require input again
-     * 
+     *
      * @return the name of valid course
      */
     public static String checkInputCourse() {
@@ -113,36 +114,34 @@ public class Validation {
             System.out.print("Enter again: ");
         }
     }
-    
+
     /**
      * Check course is valid or not
-     * 
-     * @param courceName 
+     *
+     * @param courceName
      */
-    public static void checkCourse(String courceName)
-    {
-        while(true)
-        {
-        if (courceName.equalsIgnoreCase("JPD") || courceName.equalsIgnoreCase("OSG") || courceName.equalsIgnoreCase("CSD") || courceName.equalsIgnoreCase("PRJ") || courceName.equalsIgnoreCase("LAB")) {
+    public static void checkCourse(String courceName) {
+        while (true) {
+            if (courceName.equalsIgnoreCase("JPD") || courceName.equalsIgnoreCase("OSG") || courceName.equalsIgnoreCase("CSD") || courceName.equalsIgnoreCase("PRJ") || courceName.equalsIgnoreCase("LAB")) {
                 return;
-            }else
-        {
-            System.out.println("There are only three courses: JPD, OSG, CSD, PRJ, LAB");
-            System.out.print("Enter again: ");
-            courceName=checkInput();
-        }
+            } else {
+                System.out.println("There are only three courses: JPD, OSG, CSD, PRJ, LAB");
+                System.out.print("Enter again: ");
+                courceName = checkInput();
+            }
         }
     }
+
     /**
-     * 
+     *
      * @param listStudent
      * @param id
      * @param studentName
      * @param semester
      * @param courseName
-     * 
+     *
      * Check student is exist or not
-     * 
+     *
      * @return true/false
      */
 
@@ -157,19 +156,18 @@ public class Validation {
         }
         return true;
     }
-    
+
     /**
-     * 
+     *
      * @param listReport
      * @param name
      * @param course
      * @param total
-     * 
+     *
      * Check report is exist or not
-     * 
+     *
      * @return true/false
      */
-
     public static boolean checkReportExist(ArrayList<Report> listReport, String name, String course, int total) {
         for (Report report : listReport) {
             if (name.equalsIgnoreCase(report.getStudentName())
@@ -180,18 +178,17 @@ public class Validation {
         }
         return true;
     }
-    
+
     /**
-     * 
+     *
      * @param list
      * @param id
      * @param name
-     * 
+     *
      * Check id exist or not
-     * 
+     *
      * @return true/false
      */
-
     public static boolean checkIdExist(ArrayList<Student> list, String id, String name) {
         for (Student student : list) {
             if (id.equalsIgnoreCase(student.getId())
@@ -201,25 +198,25 @@ public class Validation {
         }
         return true;
     }
-    
+
     /**
-     * 
+     *
      * @param student
      * @param semester
      * @param course
-     * 
+     *
      * Check information change or not
-     * 
+     *
      * @return true/false
      */
     public static boolean checkChangeInfomation(Student student, String semester, String course) {
         return !(semester.equalsIgnoreCase(student.getSemester())
                 && course.equalsIgnoreCase(student.getCourseName()));
     }
-    
+
     /**
      * Check sort or not
-     * 
+     *
      * @return true/false
      */
     public static boolean checkSort() {

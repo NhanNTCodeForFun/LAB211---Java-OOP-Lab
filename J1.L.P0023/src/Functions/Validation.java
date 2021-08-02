@@ -17,8 +17,10 @@ import java.util.Scanner;
 public class Validation {
 
     private static final Scanner in = new Scanner(System.in);
+
     /**
      * Check input number is valid or not
+     *
      * @param min
      * @param max
      * @return valid number
@@ -38,8 +40,10 @@ public class Validation {
             }
         }
     }
+
     /**
      * Check role Staff or Customer
+     *
      * @return if staff return true / if customer return false
      */
     public static boolean checkStaffOrCustomer() {
@@ -55,8 +59,10 @@ public class Validation {
         }
 
     }
+
     /**
      * Check input string is empty or not
+     *
      * @return string
      */
     public static String checkInputString() {
@@ -70,9 +76,11 @@ public class Validation {
             }
         }
     }
+
     /**
      * Check input is Integer or not
-     * @return 
+     *
+     * @return
      */
     public static int checkInputInt() {
         while (true) {
@@ -85,9 +93,11 @@ public class Validation {
             }
         }
     }
+
     /**
      * Check input is double or not
-     * @return 
+     *
+     * @return
      */
     public static double checkInputDouble() {
         while (true) {
@@ -101,8 +111,10 @@ public class Validation {
 
         }
     }
+
     /**
      * Check input is yes or no
+     *
      * @return if yes return true/ if no return false
      */
     public static boolean checkInputYN() {
@@ -119,11 +131,13 @@ public class Validation {
             System.out.print("Enter again: ");
         }
     }
+
     /**
      * Check Id exist or not
+     *
      * @param listFruit
      * @param id
-     * @return 
+     * @return
      */
     public static boolean checkIdExist(ArrayList<Fruit> listFruit, String id) {
         for (Fruit fruit : listFruit) {
@@ -136,9 +150,10 @@ public class Validation {
 
     /**
      * Check Item exist or not
+     *
      * @param listOrder
      * @param id
-     * @return 
+     * @return
      */
     public static boolean checkItemExist(ArrayList<Order> listOrder, String id) {
         for (Order order : listOrder) {
@@ -148,14 +163,14 @@ public class Validation {
         }
         return true;
     }
-    
+
     /**
      * Check Phone number valid or not
+     *
      * @param phoneNumber
      * @return true/false
      */
-    public static boolean checkPhoneNumber(String phoneNumber)
-    {
-        return phoneNumber.matches("\\d+")&&(phoneNumber.length()==10||phoneNumber.length()==11);
+    public static boolean checkPhoneNumber(String phoneNumber) {
+        return phoneNumber.matches("\\d+") && (phoneNumber.length() == 10 || phoneNumber.length() == 11);
     }
 }

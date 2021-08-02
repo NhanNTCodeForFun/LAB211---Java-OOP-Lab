@@ -110,7 +110,7 @@ public class Main {
                                             case 3:
                                                 Manager.removeStaff(listst);
                                                 break;
-                                            
+
                                             case 4:
                                                 Manager.updateStaff(listst);
                                                 break;
@@ -167,7 +167,7 @@ public class Main {
                                 case 6:
                                     Manager.writeFruit(listfr, "Fruit.txt");
                                     Manager.writeStaff(listst, "Staff.txt");
-                                    loginst=false;
+                                    loginst = false;
                                     break;
                             }
                         } while (choiceManager != 6);
@@ -186,7 +186,7 @@ public class Main {
                                     Manager.ChangePassword(listst, staff);
                                     break;
                                 case 4:
-                                    loginst=false;
+                                    loginst = false;
                                     break;
                             }
 

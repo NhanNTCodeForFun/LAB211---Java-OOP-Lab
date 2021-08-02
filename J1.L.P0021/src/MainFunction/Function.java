@@ -25,11 +25,12 @@ import java.util.Scanner;
 public class Function {
 
     public static Scanner sc = new Scanner(System.in);
+
     /**
-     * 
+     *
      * @param filename
-     * @param list 
-     * 
+     * @param list
+     *
      * Load data form file
      */
     public static void loadFile(String filename, ArrayList<Student> list) {
@@ -62,13 +63,13 @@ public class Function {
         }
         System.out.println("Loaded!");
     }
-    
+
     /**
      * Write data to the file
+     *
      * @param list
-     * @param filename 
+     * @param filename
      */
-
     public static void writeFile(ArrayList<Student> list, String filename) {
         if (list == null || list.isEmpty()) {
             return;
@@ -91,11 +92,10 @@ public class Function {
             }
         }
     }
-    
+
     /**
      * Main menu
      */
-
     public static void menu() {
         System.out.println("");
         System.out.println("");
@@ -109,35 +109,33 @@ public class Function {
         System.out.println("");
         System.out.print(" Your choice (1->5): ");
     }
-    
+
     /**
      * find Menu
      */
-
     public static void findMenu() {
         System.out.println("1. Find by name.");
         System.out.println("2. Find by ID.");
         System.out.println("3. Exit.");
         System.out.println("Your choice (1->3): ");
     }
-    
+
     /**
      * Update or Delete Menu
      */
-
     public static void UorDMenu() {
         System.out.println("1. Update.");
         System.out.println("2. Delete.");
         System.out.println("3. Exit.");
         System.out.println("Your choice (1->3): ");
     }
-    
+
     /**
      * Create a student and write to file
+     *
      * @param count
-     * @param list 
+     * @param list
      */
-
     public static void createStudent(int count, ArrayList<Student> list) {
 
         System.out.println("Enter EXIT to EXIT!");
@@ -180,12 +178,12 @@ public class Function {
             writeFile(list, filename);
         }
     }
-    
+
     /**
      * Find and sort list Student by name
+     *
      * @param listStudent
      */
-
     public static void findAndSortByName(ArrayList<Student> listStudent) {
         if (listStudent.isEmpty()) {
             System.out.println("List empty!");
@@ -202,12 +200,12 @@ public class Function {
             }
         }
     }
-    
+
     /**
      * Find student by name
-     * @param listStudent 
+     *
+     * @param listStudent
      */
-
     public static void findByName(ArrayList<Student> listStudent) {
         if (listStudent.isEmpty()) {
             System.out.println("List empty!");
@@ -241,11 +239,10 @@ public class Function {
 //            }
 //        }
 //    }
-    
-    
     /**
      * Find student by ID
-     * @param listStudent 
+     *
+     * @param listStudent
      */
     public static void findByID(ArrayList<Student> listStudent) {
         if (listStudent.isEmpty()) {
@@ -262,10 +259,10 @@ public class Function {
             }
         }
     }
-    
-    
+
     /**
      * This function will find list student find by name and return it
+     *
      * @param listStudent
      * @return listStudentFindByName
      */
@@ -280,13 +277,13 @@ public class Function {
         }
         return listStudentFindByName;
     }
-    
+
     /**
      * This function will find list student find by ID and return it
+     *
      * @param listStudent
      * @return listStudentFindByID
      */
-
     public static ArrayList<Student> ListStudentFindByID(ArrayList<Student> listStudent) {
         ArrayList<Student> listStudentFindByID = new ArrayList<>();
         System.out.print("Enter ID to search: ");
@@ -298,12 +295,13 @@ public class Function {
         }
         return listStudentFindByID;
     }
-    
+
     /**
      * Update information of student
+     *
      * @param count
      * @param listStudent
-     * @throws Exception 
+     * @throws Exception
      */
     public static void update(int count, ArrayList<Student> listStudent) throws Exception {
 
@@ -354,11 +352,12 @@ public class Function {
         }
 
     }
-    
+
     /**
      * Delete a student
+     *
      * @param count
-     * @param listStudent 
+     * @param listStudent
      */
     public static void delete(int count, ArrayList<Student> listStudent) {
         if (listStudent.isEmpty()) {
@@ -372,13 +371,12 @@ public class Function {
                 System.out.println("Not found student.");
             } else {
                 ArrayList<Student> student = getListStudentByListFound(listStudentFindByID);
-                    for (Student student1 : student) {
+                for (Student student1 : student) {
                     listStudent.remove(student1);
-                    
+
                 }
-                    System.out.println("Deleted!");
-                    writeFile(listStudent, filename);
-                    
+                System.out.println("Deleted!");
+                writeFile(listStudent, filename);
 
             }
         }
@@ -386,11 +384,11 @@ public class Function {
     }
 
     /**
-     * 
+     *
      * @param listStudentFindByName
      * @param listStudent
      * @return
-     * @throws Exception 
+     * @throws Exception
      */
     public static Student getStudentByListFound(ArrayList<Student> listStudentFindByName, ArrayList<Student> listStudent) throws Exception {
         System.out.println("List student found: ");
@@ -413,11 +411,11 @@ public class Function {
         return null;
 
     }
-    
+
     /**
-     * 
+     *
      * @param listStudentFindByID
-     * @return 
+     * @return
      */
     public static ArrayList<Student> getListStudentByListFound(ArrayList<Student> listStudentFindByID) {
         ArrayList<Student> list = new ArrayList<>();
@@ -474,13 +472,13 @@ public class Function {
 
         return list;
     }
-    
-    
+
     /**
      * Get listStudent by Id
+     *
      * @param listStudent
      * @param id
-     * @return 
+     * @return
      */
     public static ArrayList<Student> getListStudentById(ArrayList<Student> listStudent, String id) {
         ArrayList<Student> getListStudentById = new ArrayList<>();

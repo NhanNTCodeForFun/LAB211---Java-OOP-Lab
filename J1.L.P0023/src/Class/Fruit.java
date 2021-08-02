@@ -10,13 +10,14 @@ package Class;
  * @author NhanNT
  */
 public class Fruit {
+
     private String FruitId;
     private String FruitName;
     private double price;
     private int quantity;
     private String Origin;
-    
-    public Fruit(){
+
+    public Fruit() {
     }
 
     public Fruit(String FruitId, String FruitName, double price, int quantity, String Origin) {
@@ -65,7 +66,7 @@ public class Fruit {
 
     public void setOrigin(String Origin) {
         this.Origin = Origin;
-    }   
+    }
 
     @Override
     public String toString() {
